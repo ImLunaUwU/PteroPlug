@@ -1,0 +1,8 @@
+general: 
+  autoplug: 
+    target-software: MINECRAFT_SERVER
+    start-on-boot: false
+    system-tray: 
+      enable: false
+  server: 
+    start-command: 

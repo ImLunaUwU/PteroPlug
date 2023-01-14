@@ -1,0 +1,16 @@
+updater: 
+  java-updater: 
+    enable: true
+    profile: AUTOMATIC
+    version: 17
+  server-updater: 
+    enable: true
+    profile: AUTOMATIC
+    software: purpur
+    version: null
+  plugins-updater: 
+    enable: true
+    profile: AUTOMATIC
+  mods-updater: 
+    enable: true
+    profile: AUTOMATIC
