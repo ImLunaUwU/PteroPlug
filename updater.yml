@@ -12,7 +12,7 @@ updater:
     enable:     true # AutoPlug
     build: stable
   java-updater: 
-    enable: false # Java
+    enable: true # Java
     profile: AUTOMATIC
     version: 17
   server-updater: 
@@ -24,6 +24,6 @@ updater:
     enable:   true # Plugins
     profile: AUTOMATIC
   mods-updater: 
-    enable:    false # Mods
+    enable:    true # Mods
     profile: AUTOMATIC
     version: MODS_VERSION
