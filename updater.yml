@@ -9,20 +9,21 @@
 
 updater: 
   self-updater: 
-    enable: true
+    enable: true # AutoPlug
     build: stable
   java-updater: 
-    enable: true
+    enable: true # Java
     profile: AUTOMATIC
     version: 17
   server-updater: 
-    enable: true
+    enable: true # Server
     profile: AUTOMATIC
-    software: purpur
-    version: 1.19.1
+    software: SOFTWARE
+    version: PLUGINS_VERSION
   plugins-updater: 
-    enable: true
+    enable: true # Plugins
     profile: AUTOMATIC
   mods-updater: 
-    enable: false
+    enable: true # Mods
     profile: AUTOMATIC
+    version: MODS_VERSION
