@@ -1,8 +1,59 @@
+# #######################################################################################################################
+#     ___       __       ___  __
+#    / _ |__ __/ /____  / _ \/ /_ _____ _
+#   / __ / // / __/ _ \/ ___/ / // / _ `/
+#  /_/ |_\_,_/\__/\___/_/  /_/\_,_/\_, /
+#                                 /___/ General-Config
+# Thank you for using AutoPlug!
+# You can find detailed installation instructions here: https://autoplug.one/installer
+# If there are any questions or you just want chat, join our Discord: https://discord.gg/GGNmtCC
+# 
+# #######################################################################################################################
 general: 
+
   autoplug: 
+    # Select the target software AutoPlug was installed on.
+    # Available options: MINECRAFT_CLIENT, MINECRAFT_SERVER, MINDUSTRY, OTHER.
+    # When changed, requires an AutoPlug restart to take effect.
     target-software: MINECRAFT_SERVER
+    # Starts AutoPlug automatically right after the system booted up.
+    # The current user is used to register the script that is started on system boot.
+    # The script is located at /autoplug/system and can be modified, but should not be renamed or have its path changed.
+    # By default the script launches AutoPlug in the background without a terminal, thus its recommended to also enable the system-tray GUI to have access to the output.
+    # If you have no GUI its recommended to install software like "screen" for virtual terminals and edit the script accordingly.
     start-on-boot: false
     system-tray: 
       enable: false
+      # Select between: light, dark and darcula.
+      theme: light
+    # Stops AutoPlug when your server stops. Enabling this feature is not recommended.
+    auto-stop: false
+
   server: 
-    start-command: 
+    # The full command used to start your server.
+    # Like 'java -jar server.jar' for example, or './server.exe'.
+    # ./ represents the working directory (where the AutoPlug was started from).
+    start-command: REPLACEME
+    # Enter your Server-Key here. You get it by registering yourself and your server on https://autoplug.one.
+    # The Server-Key enables remote access from your account.
+    # No matter what, keep this key private to ensure your servers security!
+    key: INSERT_KEY_HERE
+    # Starts your server with the start of AutoPlug.
+    auto-start: true
+    # Creates an eula.txt file if not existing and accepts it.
+    auto-eula: true
+    # AutoPlug uses this command to stop your server.
+    stop-command: stop
+    restart-on-crash: true
+
+  directory-cleaner: 
+    # Deletes files older than 'max-days' in the selected directories.
+    enabled: true
+    # If the file is older than the provided time in days, it gets deleted.
+    max-days: 7
+    # The list of directories to clean.
+    # By default sub-directories will not get cleaned, unless you add 'true' before its path, like shown below.
+    # Supported paths are relative (starting with './' which is the servers root directory) and absolute paths.
+    list: 
+      - true ./autoplug/logs
+      - ./autoplug/downloads
