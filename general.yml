@@ -23,7 +23,7 @@ general:
     key: INSERT_KEY_HERE
     auto-start: true
     auto-eula: true
-    start-command: java -jar "/home/container/purpur.jar"
+    start-command: REPLACE-ME
     stop-command: stop
     restart-on-crash: true
 
