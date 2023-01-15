@@ -1,13 +1,7 @@
 #!/bin/sh
 if [ ! -f hasrun ]; then
-echo "Running first run configs. Please wait 15 seconds."
-sleep 15
-if [ -f general.yml ]; then
-mv general.yml autoplug/general.yml
-fi
-if [ -f updater.yml ]; then
-mv updater.yml autoplug/updater.yml
-fi
+echo "Waiting for congfigs to apply. Please wait 5 seconds."
+sleep 5
 echo 'The server has run more than once.' > hasrun
 else
 java -Xms128M -Xmx"$1"M -Dterminal.jline=false -Dterminal.ansi=true -jar "$2"
