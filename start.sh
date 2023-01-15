@@ -1,6 +1,7 @@
-if [ !-f hasrun ]; then
-echo -e "Running first run configs. Please wait 15 seconds."
-wait 15
+#!/bin/sh
+if [ ! -f hasrun ]; then
+echo "Running first run configs. Please wait 15 seconds."
+sleep 15
 if [ -f general.yml ]; then
 mv general.yml autoplug/general.yml
 fi
