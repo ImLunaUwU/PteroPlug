@@ -1,31 +1,28 @@
+# #######################################################################################################################
+#     ___       __       ___  __
+#    / _ |__ __/ /____  / _ \/ /_ _____ _
+#   / __ / // / __/ _ \/ ___/ / // / _ `/
+#  /_/ |_\_,_/\__/\___/_/  /_/\_,_/\_, /
+#                                 /___/ Updater-Config
+# 
+# #######################################################################################################################
+
 updater: 
+  self-updater: 
+    enable: true
+    build: stable
   java-updater: 
-    enable: true # Java
+    enable: true
     profile: AUTOMATIC
     version: 17
-    build-id: 0
-    large-heap: false
-
   server-updater: 
-    enable: true # Server
+    enable: true
     profile: AUTOMATIC
-    software: EDITMEUWU
-    version: SERVERVERSION
-
+    software: purpur
+    version: 1.19.1
   plugins-updater: 
-    enable: true # Plugins
+    enable: true
     profile: AUTOMATIC
-    path: ./plugins
-    async: true
-
   mods-updater: 
-    enable: true # Mods
+    enable: false
     profile: AUTOMATIC
-    path: ./mods
-    version: 
-    async: true
-    
-  self-updater: 
-    enable: true # AutoPlug
-    profile: AUTOMATIC
-    build: stable

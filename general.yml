@@ -1,11 +1,35 @@
+# #######################################################################################################################
+#     ___       __       ___  __
+#    / _ |__ __/ /____  / _ \/ /_ _____ _
+#   / __ / // / __/ _ \/ ___/ / // / _ `/
+#  /_/ |_\_,_/\__/\___/_/  /_/\_,_/\_, /
+#                                 /___/ General-Config
+# 
+# #######################################################################################################################
 general: 
+
   autoplug: 
+    auto-stop: false
+    start-on-boot: false
     target-software: MINECRAFT_SERVER
-    
+    system-tray: 
+      enable: false
+      theme: light
+
   server: 
-    start-command: REPLACEME
+    # Enter your Server-Key here. You get it by registering yourself and your server on https://autoplug.one.
+    # The Server-Key enables remote access from your account.
+    # No matter what, keep this key private to ensure your servers security!
     key: INSERT_KEY_HERE
     auto-start: true
     auto-eula: true
+    start-command: java -jar "/home/container/purpur.jar"
     stop-command: stop
     restart-on-crash: true
+
+  directory-cleaner: 
+    enabled: true
+    max-days: 7
+    list: 
+      - true ./autoplug/logs
+      - ./autoplug/downloads
