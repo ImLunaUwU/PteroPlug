@@ -1,16 +1,31 @@
 updater: 
   java-updater: 
-    enable: 
+    enable: true # Java
     profile: AUTOMATIC
     version: 17
+    build-id: 0
+    large-heap: false
+
   server-updater: 
-    enable: 
+    enable: true # Server
     profile: AUTOMATIC
-    software: 
-    version: 
+    software: EDITMEUWU
+    version: SERVERVERSION
+
   plugins-updater: 
-    enable: 
+    enable: true # Plugins
     profile: AUTOMATIC
+    path: ./plugins
+    async: true
+
   mods-updater: 
-    enable: 
+    enable: true # Mods
     profile: AUTOMATIC
+    path: ./mods
+    version: 
+    async: true
+    
+  self-updater: 
+    enable: true # AutoPlug
+    profile: AUTOMATIC
+    build: stable
