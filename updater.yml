@@ -9,21 +9,21 @@
 
 updater: 
   self-updater: 
-    enable: true # AutoPlug
+    enable:     true # AutoPlug
     build: stable
   java-updater: 
-    enable: true # Java
+    enable: false # Java
     profile: AUTOMATIC
     version: 17
   server-updater: 
-    enable: true # Server
+    enable:  true # Server
     profile: AUTOMATIC
     software: SOFTWARE
     version: PLUGINS_VERSION
   plugins-updater: 
-    enable: true # Plugins
+    enable:   true # Plugins
     profile: AUTOMATIC
   mods-updater: 
-    enable: true # Mods
+    enable:    false # Mods
     profile: AUTOMATIC
     version: MODS_VERSION
