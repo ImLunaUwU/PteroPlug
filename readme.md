@@ -26,3 +26,6 @@ Contact LunaUwU#6969 for additional server types.
 <h3>Special thanks to:</h3>
 <li>AutoPlug - https://autoplug.one/</li>
 <li>Pterodactyl - https://pterodactyl.io/</li>
+
+<br><br><br>
+https://lunauwu.net/
