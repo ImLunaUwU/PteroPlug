@@ -52,6 +52,7 @@ elif [ "$2" = "fabric" ];
 if [ ! -f fabric.jar ]; then
 echo -e "Downloading Fabric server..."
 wget -O ${SERVER_TYPE}.jar https://meta.fabricmc.net/v2/versions/loader/${GAME_VERSION}/${LOADER_VERSION}/${FABRIC_VERSION}/server/jar
+rm -f paper.jar purpur.jar spigot.jar
 fi
 else
 echo "No change in server software."
