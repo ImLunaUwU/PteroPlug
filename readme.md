@@ -21,7 +21,7 @@ Please report bugs/errors under the ["Issues"](https://github.com/ImLunaUwU/Pter
 <h3>Things that work:</h3>
 <li>Setting AutoPlug server key (Needed for most features)</li>
 <li>Custom Java start arguments</li>
-<li>"Hotswap" between Purpur and Spigot</li>
+<li>"Hotswap" between Purpur, Spigot and Fabric.</li>
 
 <h3>Special thanks to:</h3>
 <li>AutoPlug - https://autoplug.one/</li>
