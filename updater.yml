@@ -9,21 +9,21 @@
 
 updater: 
   self-updater: 
-    enable:     true # AutoPlug
+    enable: true # AutoPlug
     build: stable
-  java-updater: 
-    enable: true # Java
+  java-updater: # WARNING! JAVA SHOULD NOT AUTOMATICALLY UPDATE WITHIN PTERODACTYL! THE PANEL WAS NOT BUILT FOR IT, AND MAY BREAK.
+    enable: false # CHANGE THIS VALUE AT YOUR OWN RISK. IT ***WILL*** BREAK DUE TO THE WAY THE VERSIONING SCRIPTS ARE MADE. THIS CANNOT BE FIXED.
     profile: AUTOMATIC
-    version: 17
+    version: # Will auto replace on install. (And theryby break Java updating uwu)
   server-updater: 
-    enable:  true # Server
+    enable: true # Server
     profile: AUTOMATIC
-    software: SOFTWARE
-    version: PLUGINS_VERSION
+    software: # Will auto replace on install.
+    version: # Will auto replace on install.
   plugins-updater: 
-    enable:   true # Plugins
+    enable: true # Plugins
     profile: AUTOMATIC
   mods-updater: 
-    enable:    true # Mods
+    enable: true # Mods
     profile: AUTOMATIC
-    version: MODS_VERSION
+    version: # Will auto replace on install.
