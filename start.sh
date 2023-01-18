@@ -8,11 +8,11 @@ if [ "$2" = "purpur" ]; then
 if [ ! -f purpur.jar ]; then
 echo -e "Downloading Purpur server..."
 curl -o ${SERVER_TYPE}.jar https://api.purpurmc.org/v2/purpur/${GAME_VERSION}/latest/download
-rm -f paper.jar spigot.jar
+rm -f paper.jar spigot.jar fabric.jar
 fi
 elif [ "$2" = "paper" ]; then
 if [ ! -f paper.jar ]; then
-rm -f spigot.jar purpur.jar
+rm -f spigot.jar purpur.jar fabric.jar
 echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 echo " "
 echo " "
@@ -34,7 +34,7 @@ elif [ "$2" = "spigot" ]; then
 if [ ! -f spigot.jar ]; then
 echo -e "Downloading Spigot server..."
 curl -o ${SERVER_TYPE}.jar https://download.getbukkit.org/spigot/spigot-${GAME_VERSION}.jar
-rm -f paper.jar purpur.jar
+rm -f paper.jar purpur.jar fabric.jar
 echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 echo " "
 echo " "
@@ -48,6 +48,10 @@ echo " "
 echo " "
 echo " "
 echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+elif [ "$2" = "fabric" ];
+if [ ! -f fabric.jar ]; then
+echo -e "Downloading Fabric server..."
+wget -O ${SERVER_TYPE}.jar https://meta.fabricmc.net/v2/versions/loader/${GAME_VERSION}/${LOADER_VERSION}/${FABRIC_VERSION}/server/jar
 fi
 else
 echo "No change in server software."
