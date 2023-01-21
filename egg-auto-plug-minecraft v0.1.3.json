@@ -1,0 +1,75 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2023-01-21T21:28:48+01:00",
+    "name": "AutoPlug Minecraft",
+    "author": "major@ytmajor.com",
+    "description": "AutoPlug is an automatic plugin and server updater.\r\n\r\nThis egg was made by Luna - https:\/\/lunauwu.net\/\r\nThank you for using PteroPlug and AutoPlug!\r\n\r\nhttps:\/\/github.com\/ImLunaUwU\/PteroPlug",
+    "features": null,
+    "docker_images": {
+        "ghcr.io\/pterodactyl\/yolks:java_17": "ghcr.io\/pterodactyl\/yolks:java_17",
+        "ghcr.io\/pterodactyl\/yolks:java_16": "ghcr.io\/pterodactyl\/yolks:java_16",
+        "ghcr.io\/pterodactyl\/yolks:java_11": "ghcr.io\/pterodactyl\/yolks:java_11",
+        "ghcr.io\/pterodactyl\/yolks:java_8": "ghcr.io\/pterodactyl\/yolks:java_8"
+    },
+    "file_denylist": [],
+    "startup": "java -Xms128M -Xmx500M -Dterminal.jline=false -Dterminal.ansi=true -jar AutoPlug-Client.jar",
+    "config": {
+        "files": "{\r\n    \"server.properties\": {\r\n        \"parser\": \"properties\",\r\n        \"find\": {\r\n            \"server-ip\": \"0.0.0.0\",\r\n            \"server-port\": \"{{server.build.default.port}}\"\r\n        }\r\n    },\r\n    \".\/autoplug\/general.yml\": {\r\n        \"parser\": \"file\",\r\n        \"find\": {\r\n            \"    key:\": \"    key: {{server.build.env.SERVER_KEY}}\",\r\n            \"    start-command: \": \"    start-command: java -Xms128M -Xmx{{server.build.memory}}M {{server.build.env.JAVA_ARGS}} -jar \\\".\/{{server.build.env.SERVER_TYPE}}.jar\\\"\"\r\n        }\r\n    },\r\n    \".\/autoplug\/updater.yml\": {\r\n        \"parser\": \"file\",\r\n        \"find\": {\r\n            \"    software:\": \"    software: {{server.build.env.SERVER_TYPE}}\",\r\n            \"    version: \": \"    version: {{server.build.env.GAME_VERSION}}\"\r\n        }\r\n    }\r\n}",
+        "startup": "{\r\n    \"done\": \")! For help, type \"\r\n}",
+        "logs": "{}",
+        "stop": ".stop both"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!\/bin\/bash\r\n# AutoPlug & Game Installation Script\r\n#\r\n# Server Files: \/mnt\/server\r\ncd \/mnt\/server\r\napt update\r\napt install -y curl jq\r\napt install -y wget\r\n#\r\n#\r\n# Check for AutoPlug directory.\r\n#\r\n#\r\necho -e \"Checking for AutoPlug directory.\"\r\nif [ ! -d \"\/autoplug\/\" ]; then\r\necho -e \"AutoPlug directory not found, making one.\"\r\nmkdir autoplug\r\nfi\r\necho -e \"Checking for Mods directory.\"\r\nif [ ! -d \"\/mods\/\" ]; then\r\necho -e \"Mods directory not found, making one.\"\r\nmkdir mods\r\nfi\r\necho -e \"Checking for Plugins directory.\"\r\nif [ ! -d \"\/plugins\/\" ]; then\r\necho -e \"Plugins directory not found, making one.\"\r\nmkdir plugins\r\nfi\r\n#\r\n#\r\n# Install AutoPlug\r\n#\r\n#\r\necho -e \"Installing AutoPlug...\"\r\nif [ ! -f AutoPlug-Client.jar ]; then\r\nwget -O AutoPlug-Client.jar https:\/\/raw.githubusercontent.com\/Osiris-Team\/AutoPlug-Releases\/master\/stable-builds\/AutoPlug-Client.jar\r\nelse\r\necho -e \"AutoPlug already installed! Resuming...\"\r\nfi\r\n#\r\n#\r\n# Install Server Files\r\n#\r\n#\r\necho -e \"Downloading server.properties\"\r\nwget -O server.properties https:\/\/raw.githubusercontent.com\/parkervcp\/eggs\/master\/minecraft\/java\/server.properties\r\necho -e \"Downloading AutoPlug's general.yml config\"\r\nwget -O autoplug\/general.yml https:\/\/raw.githubusercontent.com\/ImLunaUwU\/PteroPlug\/main\/general.yml\r\necho -e \"Downloading AutoPlug's updater.yml config...\"\r\nwget -O autoplug\/updater.yml https:\/\/raw.githubusercontent.com\/ImLunaUwU\/PteroPlug\/main\/updater.yml\r\n#\r\n#\r\n# Credits:\r\n#\r\n# PteroPlug - AutoPlug Pterodactyl Egg by Luna\r\n# https:\/\/lunauwu.net\/ https:\/\/github.com\/ImLunaUwU\/PteroPlug\r\n#\r\n# AutoPlug by Osiris\r\n# https:\/\/autoplug.one\/\r\n#\r\n# Various server software.\r\n#\r\n#",
+            "container": "debian:buster-slim",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": [
+        {
+            "name": "Server Type",
+            "description": "Must be paper, waterfall, travertine, velocity, purpur, fabric, spigot, bungeecord, patina, pufferfish, mirai, pearl, windspigot.\r\nIt is recommended to use purpur for \"Vanilla\" servers.",
+            "env_variable": "SERVER_TYPE",
+            "default_value": "purpur",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "AutoPlug Server Key",
+            "description": "The key of your server. \r\nNeeded if you want to use the panel on https:\/\/autoplug.one\/",
+            "env_variable": "SERVER_KEY",
+            "default_value": "null",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:300",
+            "field_type": "text"
+        },
+        {
+            "name": "Game Version",
+            "description": "Minecraft Version\r\nFormat: 1.x.x",
+            "env_variable": "GAME_VERSION",
+            "default_value": "1.19.3",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "Java Launch Arguments",
+            "description": "Custom Java arguments.\r\nDefault value has the recommended settings for a server running Purpur.",
+            "env_variable": "JAVA_ARGS",
+            "default_value": "-Dterminal.jline=false -Dterminal.ansi=true -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https:\/\/mcflags.emc.gs -Daikars.new.flags=true --add-modules=jdk.incubator.vector",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string",
+            "field_type": "text"
+        }
+    ]
+}
