@@ -27,3 +27,5 @@ updater:
     enable: true # Mods
     profile: AUTOMATIC
     version: # Will auto replace on install.
+
+  global-cool-down: 0
