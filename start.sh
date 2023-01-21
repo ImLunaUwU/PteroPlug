@@ -2,7 +2,29 @@
 # PteroPlug Start Script
 #
 # 
-
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+echo " "
+echo " "
+echo " "
+echo " "
+echo " "
+echo "THERE IS A NEWER VERSION OF THE PTEROPLUG EGG."
+echo "Please go update, as the newer versions are much more optimized and will run much more reliably."
+echo "https://github.com/ImLunaUwU/PteroPlug"
+echo "Thank you! - Luna"
+echo " "
+echo " "
+echo " "
+echo " "
+echo " "
+echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 echo "Checking for change in server software."
 if [ "$2" = "purpur" ]; then
 if [ ! -f purpur.jar ]; then
