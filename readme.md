@@ -18,7 +18,8 @@ Please report bugs/errors under the ["Issues"](https://github.com/ImLunaUwU/Pter
 <h3>Changelog:</h3>
 <li>Introduced support for the rest of the server software. - v0.1.3</li>
 <li>Removed Fabric variables due to the fact they're no longer needed. - v0.1.3</li>
-<li>Removed 60% of the start and install script, thank you Osiris! - v0.1.3</li>
+<li>Removed 100% of the start script and 70% of the install script, thank you Osiris! - v0.1.3</li>
+<li>The start script is still in this repository to keep backwards compatibility up. Please update.</li>
 <li>Removed all updater toggle variables as they only worked once anyway. - v0.1.2</li>
 <li>Added Fabric support + Fabric variables. - v0.1.2</li>
 
