@@ -1,7 +1,7 @@
 <h1>PteroPlug - AutoPlug egg for Pterodactyl server panel.</h1>
 
 <h3>Known Issues:</h3>
-<li>Currently none.</li>
+<li>Server jar name might be wrong.</li>
 
 Please report bugs/errors under the ["Issues"](https://github.com/ImLunaUwU/PteroPlug/issues "Issues tab") tab.
 
