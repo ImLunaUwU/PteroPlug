@@ -1,5 +1,6 @@
 <h1>PteroPlug - AutoPlug egg for Pterodactyl server panel.</h1>
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L4L7DX3VR)
 <h3>Known Issues:</h3>
 <li>None currently.</li>
 
