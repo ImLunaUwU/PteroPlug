@@ -1,6 +1,8 @@
 <h1>PteroPlug - AutoPlug egg for Pterodactyl server panel.</h1>
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L4L7DX3VR)
+<h3>WARNING ⚠️: The Java updater should stay OFF under any circumstances.<br>Turning it on will likely result in things breaking.<br>I will not be responsible for any corrupt data.</h3>
+<br>
 <h3>Known Issues:</h3>
 <li>None currently.</li>
 
