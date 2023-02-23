@@ -4,7 +4,7 @@
 <h3>WARNING ⚠️: The Java updater should stay OFF under any circumstances.<br>Turning it on will likely result in things breaking.<br>I will not be responsible for any corrupt data.</h3>
 <br>
 <h3>Known Issues:</h3>
-<li>None currently.</li>
+<li>Server doesn't start after AutoPlug scheduled restart. <br> - Fix: Use Pterodactyl schedules instead.</li>
 
 Please report bugs/errors under the ["Issues"](https://github.com/ImLunaUwU/PteroPlug/issues "Issues tab") tab.
 
