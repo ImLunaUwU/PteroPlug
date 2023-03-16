@@ -30,7 +30,7 @@ Please report bugs/errors under the ["Issues"](https://github.com/ImLunaUwU/Pter
 <li>Nothing currently</li>
 
 <h3>Currently supported server software:</h3>
-<li>Everything that AutoPlug supports! - Since v0.1.3</li>
+<li>All Minecraft server software that AutoPlug supports! - Since v0.1.3<br>NOTE: THIS EGG IS MAY NOT WORK WITH OTHER TYPES OF SERVERS THAT AUTOPLUG NORMALLY WOULD SUPPORT.<br>ALL USAGE IS UNDER YOUR OWN RESPONSIBILITY.</li>
 
 <br><br><br>
 https://lunauwu.net/
