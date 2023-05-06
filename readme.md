@@ -33,4 +33,16 @@ Please report bugs/errors under the ["Issues"](https://github.com/ImLunaUwU/Pter
 <li>All Minecraft server software that AutoPlug supports! - Since v0.1.3<br>NOTE: THIS EGG IS MAY NOT WORK WITH OTHER TYPES OF SERVERS THAT AUTOPLUG NORMALLY WOULD SUPPORT.<br>ALL USAGE IS UNDER YOUR OWN RESPONSIBILITY.</li>
 
 <br><br><br>
+
+
+
+
+### I've partnered with Kinetic Hosting!
+If you need a cheap server, you can use my code and affiliate link below.
+This will give you a discounted first month, and me a small commission, in the end benefitting us both!
+[![KineticLuna](https://cdn.discordapp.com/attachments/715960179803553812/1104414507821973604/luna.png)](https://billing.kinetichosting.net/aff.php?aff=341)
+
+Use code Luna for 15% off your first month!
+https://billing.kinetichosting.net/aff.php?aff=341
+<br><br><br>
 https://lunauwu.net/
