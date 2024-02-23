@@ -40,7 +40,7 @@ Please report bugs/errors under the ["Issues"](https://github.com/ImLunaUwU/Pter
 ### I've partnered with Kinetic Hosting!
 If you need a cheap server, you can use my code and affiliate link below.
 This will give you a discounted first month, and me a small commission, in the end benefitting us both!
-[![KineticLuna](https://cdn.discordapp.com/attachments/715960179803553812/1104414507821973604/luna.png)](https://billing.kinetichosting.net/aff.php?aff=341)
+[![KineticLuna](https://i.imgur.com/ajU8Zx3.png)](https://billing.kinetichosting.net/aff.php?aff=341)
 
 Use code Luna for 15% off your first month!
 https://billing.kinetichosting.net/aff.php?aff=341
